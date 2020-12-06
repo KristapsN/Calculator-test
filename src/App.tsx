@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import 'flexboxgrid';
 import { ChoseNumber } from './components/inputNumber/inputNumber';
+import { Select } from './components/inputNumber/select';
 
 
 const App = () => {
@@ -49,13 +50,10 @@ const App = () => {
                 inputValue={inputValueFirst}
                 inputHandler={(e) => inputHandlerFirst(e)}
               />
-              <select name="expr" id="expr" onChange={(e) => sletctHandler(e)} value={selectedOption}>
-                <option value="Chose">Chose</option>
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="/">/</option>
-                <option value="*">*</option>
-              </select>
+              <Select
+                selectHandler={(e) => sletctHandler(e)}
+                value={selectedOption}
+              />
               <ChoseNumber
                 inputValue={inputValueSecond}
                 inputHandler={(e) => inputHandlerSecond(e)}
